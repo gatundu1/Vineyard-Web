@@ -1,0 +1,120 @@
+ <html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!--Css-->
+<link rel="stylesheet" href="formstyling.css">
+
+ <!--Font Awesome-->
+<script src="https://kit.fontawesome.com/6a940006a9.js" crossorigin="anonymous"></script>
+ <title>Vineyard School- Apply Now</title>
+</head>
+<body>
+  <div id="error"></div>
+  <div class="container">
+   <header><h3>Additional Information</h3></header>
+   <form action="" class="form" id="form">
+    <div class="form-control ">
+     <label>Guardian Name</label>
+     <input type="text" placeholder="Guardian Name" id="gname">
+    </div>
+
+    <div class="form-control">
+     <label>Guardian Phone Number</label>
+     <input type="text" placeholder="Phone Number" id="mob">
+    </div>
+
+    <div class="form-control">
+      <label>Allergies</label>
+      <input type="text" placeholder="Allergies" id="allergies">
+     </div>
+
+    <div class="form-control">
+     <label>Relationship:</label><br>
+     <select class="select" id="grelation">
+       <option selected disabled>Select a Relationship</option>
+      <option value="Brother">Brother</option>
+      <option value="Sister">Sister</option>
+      <option value="Aunt">Aunt</option>
+      <option value="Uncle">Uncle</option>
+      <option value="Grandparent">Grandparent</option>
+     </select>
+
+     <p>Do you already have any other child/children enrolled in the school?</p>
+     <div class="form-control">
+      <select class="select" id="g-check">
+        <option selected disabled>Select an Option</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+     <p>If yes, how many siblings does the child have?</p>
+     <select class="select" id="gvalue">
+       <option selected disabled>Select a Number of Siblings</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+     </select>
+    <button id="btn" type="submit">Finish and Submit</button>
+   </form>
+</div>
+<script>
+  const form = document.getElementById('form');
+  const guardianName = document.getElementById('gname');
+  const guardianNumber = document.getElementById('mob');
+  const relation = document.getElementById('grelation');
+  const checkBox = document.getElementById('gcheck');
+  const siblingNumber = document.getElementById('gvalue');
+
+  form.addEventListener('submit',(e) =>{
+    
+    let messsages = []
+
+    //checking input fields
+    if(gname.value === ''|| gname.value == null){
+      messages.push('Enter the Guardian Name')
+    }
+    if(messages.length > 0){
+      e.preventDefault()
+      error.Element.innerText = messages.join()
+    }
+
+    if(mob.value === ''|| mob.value == null){
+      messages.push('Enter the Guardian Phone Number')
+    }
+    if(messages.length > 0){
+      e.preventDefault()
+      error.Element.innerText = messages.join()
+    }
+
+    if(grelation.value === ''|| grelation.value == null){
+      messages.push('Please select a relationship')
+    }
+    if(messages.length > 0){
+      e.preventDefault()
+      error.Element.innerText = messages.join()
+    }
+
+    if(gcheck.value === ''|| gcheck.value == null){
+      messages.push('Please Select an option')
+    }
+    if(messages.length > 0){
+      e.preventDefault()
+      error.Element.innerText = messages.join()
+    }
+
+    if(gvalue.value === ''|| gvalue.value == null){
+      messages.push('Please select an option')
+    }
+    if(messages.length > 0){
+      e.preventDefault()
+      error.Element.innerText = messages.join()
+    }
+  });
+</script>
+<script>
+  
+</script>
+</body>
+</html>

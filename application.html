@@ -1,0 +1,172 @@
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!--Css-->
+<link rel="stylesheet" href="formstyling.css">
+
+ <!--Font Awesome-->
+<script src="https://kit.fontawesome.com/6a940006a9.js" crossorigin="anonymous"></script>
+ <title>Vineyard School- Apply Now</title>
+ 
+</head>
+<body>
+  <div id="error"></div>
+  <div class="container">
+   <header><h3>Student Details</h3></header>
+   <form action="fp-app.html" class="form" id="form">
+    <div class="form-control ">
+     <label>First Name</label>
+     <input type="text" placeholder="First Name" id="firstname">
+     <i class="fas fa-check-circle"></i>
+     <i class="fas fa-exclamation-circle"></i>
+     <small>Error!</small>
+    </div>
+
+    <div class="form-control ">
+     <label>Middle Name</label>
+     <input type="text" placeholder="Middle Name" id="midname">
+     <i class="fas fa-check-circle"></i>
+     <i class="fas fa-exclamation-circle"></i>
+     <small>Error!</small>
+    </div>
+
+    <div class="form-control">
+     <label>Last Name</label>
+     <input type="text" placeholder="Last Name" id="lastname">
+     <i class="fas fa-check-circle"></i>
+     <i class="fas fa-exclamation-circle"></i>
+     <small>Error!</small>
+    </div>
+
+    <div class="form-control">
+     <label>Date of Birth</label>
+     <input type="date" placeholder="Date Of Birth" id="dob">
+     <i class="fas fa-check-circle"></i>
+     <i class="fas fa-exclamation-circle"></i>
+     <small>Error!</small>
+    </div>
+
+    <div class="form-control">
+     <label>Grade/Class</label><br>
+     <select class="select" name="Grade" id="grade">
+        <option selected disabled>Choose a Grade</option>
+        <option value="KG 1">KG 1</option>
+        <option value="KG 2">KG 2</option>
+        <option value="Pre Unit">Pre Unit</option>
+        <option value="Grade 1">Grade 1</option>
+        <option value="Grade 2">Grade 2</option>
+        <option value="Grade 3">Grade 3</option>
+        <option value="Class 4">Class 4</option>
+        <option value="Class 5">Class 5</option>
+        <option value="Class 6">Class 6</option>
+        <option value="Class 7">Class 7</option>
+        <option value="Class 8">Class 8</option>
+    </select>
+     <i class="fas fa-check-circle"></i>
+     <i class="fas fa-exclamation-circle"></i>
+     <small>Error!</small>
+    </div>
+
+    <div class="form-control">
+     <label>Current School</label>
+     <input type="text" placeholder="Current School" id="currentschool">
+     <i class="fas fa-check-circle"></i>
+     <i class="fas fa-exclamation-circle"></i>
+     <small>Error!</small>
+    </div>
+
+    <div class="form-control">
+     <label>Gender:</label><br>
+     <select class="select" id="gender">
+       <option selected disabled>Choose a Gender</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+     </select>
+    </div>
+    <button id="btn" type="submit">Next</button>
+   </form>
+</div>
+<script>
+  const form = document.getElementById('form');
+  const firstName = document.getElementById('firstname');
+  const midName = document.getElementById('midname');
+  const lastName = document.getElementById('lastname');
+  const dob =  document.getElementById('dob');
+  const grade = document.getElementById('grade');
+  const currentSchool = document.getElementById('currentschool');
+  const gender = document.getElementById('gender');
+  const elementError = document.getElementById('error');
+
+  form.addEventListener('submit',(e) =>{
+    
+    let messages = []
+
+    //checking the input fields
+    if(firstname.value === '' || firstname.value == null){
+      messages.push('Enter your First Name')
+    }
+    if(messages.length > 0){
+      e.preventDefault()
+      error.Element.innerText = messages.join(',')
+    }
+
+    if(midname.value === '' || mid.value == null){
+      messages.push('Enter your Middle Name')
+    }
+    if(messages.length > 0){
+      e.preventDefault()
+      error.Element.innerText = messages.join(',')
+    }
+
+    if(lastname.value === '' || lastname.value == null){
+      messages.push('Enter your Last Name')
+    }
+    if(messages.length > 0){
+      e.preventDefault()
+      error.Element.innerText = messages.join(',')
+    }
+
+    if(dob.value === '' || dob.value == null){
+      messages.push('Enter your Date of Birth')
+    }
+    if(messages.length > 0){
+      e.preventDefault()
+      error.Element.innerText = messages.join(',')
+    }
+
+    if(grade.value === '' || grade.value == null){
+      messages.push('Please select a grade')
+    }
+    if(messages.length > 0){
+      e.preventDefault()
+      error.Element.innerText = messages.join(',')
+    }
+
+    if(currentschool.value === '' || currentschool.value == null){
+      messages.push('Enter your Current school')
+    }
+    if(messages.length > 0){
+      e.preventDefault()
+      error.Element.innerText = messages.join(',')
+    }
+
+    if(gender.value === '' || gender.value == null){
+      messages.push('Please select a gender')
+    }
+    if(messages.length > 0){
+      e.preventDefault()
+      error.Element.innerText = messages.join(',')
+    }
+    
+  });
+</script>
+<script>
+  var button = document.getElementById('btn');
+  
+  btn.addEventListener('submit', function(){
+
+  });
+</script>
+</body>
+</html>

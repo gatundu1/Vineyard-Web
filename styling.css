@@ -1,0 +1,74 @@
+header{
+    background: url(Photos/web\ site\ pics/IMG_0863.JPG);
+    background-position: center;
+    background-size: cover;
+    min-height: 1000px;
+}
+
+@media screen and (max-width:450px) {
+    .nav-wrapper .brand-logo{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:768px){
+    header{
+        min-height: 500px;
+        
+    }
+    p{
+        font-size:15px;
+    }
+}
+@media screen and (max-width: 360px){
+    header{
+        min-height: 250px;
+    }
+}
+@media screen (min-width: 361px)and(max-width: 767px){
+    header{
+        min-height:350px;
+    }
+}
+@media screen and (min-width:769px){
+    p{
+     font-size: 18px;
+    }
+   }
+h3{
+    margin: 10px;
+    padding: 10px;
+}
+.nav-wrapper{
+    background: #B252AC;
+}
+.page-footer{
+    background: #7700cf;
+}
+.footer-copyright{
+    background: #1f0036;
+}
+.tabs .indicator{
+    background: #B252AC;
+}
+.tabs .tab a:focus, .tabs .tab a:focus.active{
+    background-color: transparent;
+}
+.btn{
+    background-color: #0066d1;
+}
+.card-title{
+    margin-left: 20px;
+}
+
+.card-action{
+    text-align: right;
+}
+hr{
+    opacity: 0.4;
+}
+#top{
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    cursor: pointer;
+}
